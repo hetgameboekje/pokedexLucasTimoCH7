@@ -1,3 +1,5 @@
+using MySqlX.XDevAPI.Common;
+using MySqlX.XDevAPI.Relational;
 using System.Net;
 using System.Windows.Forms;
 
@@ -9,8 +11,9 @@ namespace DatabaseTestApp
         public OverviewForm()
         {
             InitializeComponent();
+            customerDataGridView.Left -= 500;
             //dataLayer = new DataLayer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TestDB;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            dataLayer = new DataLayer("server = localhost; port = 3306; user = timodbs; password = timodbs; database = customer");
+            dataLayer = new DataLayer("server = 192.168.0.172; port = 3306; user = root; password = admin; database = customer");
         }
 
         /// <summary>
@@ -80,6 +83,7 @@ namespace DatabaseTestApp
             this.addButton.Enabled = true;
             this.viewButton.Enabled = true;
             this.deleteButton.Enabled = true;
+            PokemonPicture.BackColor= Color.Black;
         }
 
         /// <summary>
@@ -107,6 +111,19 @@ namespace DatabaseTestApp
                     PokemonPicture.SizeMode = PictureBoxSizeMode.StretchImage;
                     PokemonPicture.Image = image;
                 }
+
+                // this is the search function
+
+                customerId = int.Parse(idLabel.Text);             
+                foreach (DataGridViewRow row in customerDataGridView.Rows)
+                { 
+                    if (customer != null && customer.Id == customerId)
+                    {
+                        customerDataGridView.CurrentCell = row.Cells[0];
+                        customer.Id = customerId;
+                        break;
+                    }
+                }
             }
         }
 
@@ -121,9 +138,11 @@ namespace DatabaseTestApp
         }
 
         int customerId = 0;
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            customerId += 1; // Replace 123 with the actual customer ID you want to select
+            
+            customerId += 1;
 
             foreach (DataGridViewRow row in customerDataGridView.Rows)
             {
@@ -132,6 +151,44 @@ namespace DatabaseTestApp
                 {
                     customerDataGridView.CurrentCell = row.Cells[0];
                     break;
+                }
+                idLabel.Text = customerId.ToString();
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            customerId -= 1; // Replace 123 with the actual customer ID you want to select
+
+            foreach (DataGridViewRow row in customerDataGridView.Rows)
+            {
+                Customer customer = row.DataBoundItem as Customer;
+                if (customer != null && customer.Id == customerId)
+                {
+                    customerDataGridView.CurrentCell = row.Cells[0];
+                    break;
+                }
+                idLabel.Text = customerId.ToString();
+            }
+        }
+
+        private void PokemonTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerDataGridView_EndEdit(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in customerDataGridView.Rows)
+            {
+                var customer = row.DataBoundItem as Customer;
+                if (customer != null)
+                {
+                    dataLayer.SaveCustomer(customer);
                 }
             }
         }
