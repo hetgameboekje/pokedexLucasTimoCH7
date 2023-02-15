@@ -40,8 +40,24 @@ namespace pokedexLucasTimoCH7
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string imageUrl = "https://i.imgur.com/iG1jyam.jpeg";
+            if (_idPage == 1)
+            {
+                imageUrl = "https://i.imgur.com/iG1jyam.jpeg";
+                label1.Text = "ID = " + _idPage;
+                textBox1.Text = "Title?";
+                textBox2.Text = "Maybe this is title";
+
+            }
+            if (_idPage == 2)
+            {
+                imageUrl = "https://i.imgur.com/XTpRWVs.jpeg";
+                label1.Text = "ID = " + _idPage;
+                textBox1.Text = "Title charizard?";
+                textBox2.Text = "Maybe this is title";
+
+            }
+
             WebClient client = new WebClient();
             byte[] imageBytes = client.DownloadData(imageUrl);
             using (MemoryStream stream = new MemoryStream(imageBytes))
