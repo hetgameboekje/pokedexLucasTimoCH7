@@ -13,7 +13,7 @@ namespace DatabaseTestApp
             InitializeComponent();
             customerDataGridView.Left -= 500;
             //dataLayer = new DataLayer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TestDB;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            dataLayer = new DataLayer("server = localhost; port = 3306; user = timodbs; password = timodbs; database = customer");
+            dataLayer = new DataLayer("Server=192.168.1.2;User=timo;Password=timopi;Database=customer");
         }
 
         /// <summary>
