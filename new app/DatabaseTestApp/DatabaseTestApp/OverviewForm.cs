@@ -80,9 +80,7 @@ namespace DatabaseTestApp
         private void ReloadData()
         {
             customerDataGridView.DataSource = dataLayer.LoadAllCustomers();
-            this.addButton.Enabled = true;
-            this.viewButton.Enabled = true;
-            this.deleteButton.Enabled = true;
+
             PokemonPicture.BackColor= Color.Black;
         }
 
