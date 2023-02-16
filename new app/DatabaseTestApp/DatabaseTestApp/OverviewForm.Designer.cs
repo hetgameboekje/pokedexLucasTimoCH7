@@ -39,7 +39,6 @@
             this.idLabel = new System.Windows.Forms.TextBox();
             this.PokemonTitle = new System.Windows.Forms.TextBox();
             this.PokemonDesc = new System.Windows.Forms.TextBox();
-            this.updateButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PokemonPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -148,22 +147,11 @@
             this.PokemonDesc.Size = new System.Drawing.Size(151, 58);
             this.PokemonDesc.TabIndex = 12;
             // 
-            // updateButton
-            // 
-            this.updateButton.Location = new System.Drawing.Point(663, 152);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(94, 29);
-            this.updateButton.TabIndex = 13;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.customerDataGridView_EndEdit);
-            // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 353);
-            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.PokemonDesc);
             this.Controls.Add(this.PokemonTitle);
             this.Controls.Add(this.idLabel);
@@ -201,6 +189,5 @@
         private TextBox idLabel;
         private TextBox PokemonTitle;
         private TextBox PokemonDesc;
-        private Button updateButton;
     }
 }
