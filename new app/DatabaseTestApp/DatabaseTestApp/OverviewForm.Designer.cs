@@ -39,13 +39,21 @@
             this.idLabel = new System.Windows.Forms.TextBox();
             this.PokemonTitle = new System.Windows.Forms.TextBox();
             this.PokemonDesc = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PokemonPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // loadAllCustomersButton
             // 
-            this.loadAllCustomersButton.Location = new System.Drawing.Point(663, 12);
+            this.loadAllCustomersButton.Location = new System.Drawing.Point(821, 278);
             this.loadAllCustomersButton.Name = "loadAllCustomersButton";
             this.loadAllCustomersButton.Size = new System.Drawing.Size(94, 29);
             this.loadAllCustomersButton.TabIndex = 0;
@@ -56,7 +64,7 @@
             // addButton
             // 
             this.addButton.Enabled = false;
-            this.addButton.Location = new System.Drawing.Point(663, 47);
+            this.addButton.Location = new System.Drawing.Point(692, 278);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(94, 29);
             this.addButton.TabIndex = 3;
@@ -67,7 +75,7 @@
             // deleteButton
             // 
             this.deleteButton.Enabled = false;
-            this.deleteButton.Location = new System.Drawing.Point(663, 117);
+            this.deleteButton.Location = new System.Drawing.Point(821, 313);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(94, 29);
             this.deleteButton.TabIndex = 3;
@@ -78,7 +86,7 @@
             // viewButton
             // 
             this.viewButton.Enabled = false;
-            this.viewButton.Location = new System.Drawing.Point(663, 82);
+            this.viewButton.Location = new System.Drawing.Point(692, 313);
             this.viewButton.Name = "viewButton";
             this.viewButton.Size = new System.Drawing.Size(94, 29);
             this.viewButton.TabIndex = 3;
@@ -147,11 +155,63 @@
             this.PokemonDesc.Size = new System.Drawing.Size(151, 58);
             this.PokemonDesc.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox1.Image = global::DatabaseTestApp.Properties.Resources._31061;
+            this.pictureBox1.Location = new System.Drawing.Point(663, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.loadAllCustomersButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.LimeGreen;
+            this.pictureBox2.Image = global::DatabaseTestApp.Properties.Resources.Plus_Free_PNG;
+            this.pictureBox2.Location = new System.Drawing.Point(663, 76);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Orange;
+            this.pictureBox3.Image = global::DatabaseTestApp.Properties.Resources._698158_200;
+            this.pictureBox3.Location = new System.Drawing.Point(662, 142);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(106, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.viewButton_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Red;
+            this.pictureBox4.Image = global::DatabaseTestApp.Properties.Resources._542724;
+            this.pictureBox4.Location = new System.Drawing.Point(662, 208);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(105, 60);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 353);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PokemonDesc);
             this.Controls.Add(this.PokemonTitle);
             this.Controls.Add(this.idLabel);
@@ -171,6 +231,10 @@
             this.Load += new System.EventHandler(this.OverviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PokemonPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +253,9 @@
         private TextBox idLabel;
         private TextBox PokemonTitle;
         private TextBox PokemonDesc;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
     }
 }
