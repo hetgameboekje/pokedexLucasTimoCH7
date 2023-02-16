@@ -93,6 +93,26 @@ namespace DatabaseTestApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arrow_right_512 {
+            get {
+                object obj = ResourceManager.GetObject("Arrow-right-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Arrow_right_512___Copy {
+            get {
+                object obj = ResourceManager.GetObject("Arrow-right-512 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plus_Free_PNG {
             get {
                 object obj = ResourceManager.GetObject("Plus-Free-PNG", resourceCulture);
