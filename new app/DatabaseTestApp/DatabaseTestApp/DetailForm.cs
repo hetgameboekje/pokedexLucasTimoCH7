@@ -77,5 +77,10 @@ namespace DatabaseTestApp
                 addButton.DialogResult = DialogResult.Cancel;
             }
         }
+
+        private void firstNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

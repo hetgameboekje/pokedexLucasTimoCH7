@@ -30,7 +30,6 @@
         {
             this.PokemonPicture = new System.Windows.Forms.PictureBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.idLabel = new System.Windows.Forms.TextBox();
             this.PokemonTitle = new System.Windows.Forms.TextBox();
             this.PokemonDesc = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,6 +38,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PokemonPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,20 +60,13 @@
             // customerDataGridView
             // 
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Location = new System.Drawing.Point(-252, 47);
+            this.customerDataGridView.Location = new System.Drawing.Point(250, 12);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.RowHeadersWidth = 51;
-            this.customerDataGridView.Size = new System.Drawing.Size(425, 260);
+            this.customerDataGridView.Size = new System.Drawing.Size(109, 260);
             this.customerDataGridView.TabIndex = 2;
             this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_EndEdit);
-            // 
-            // idLabel
-            // 
-            this.idLabel.Location = new System.Drawing.Point(375, 313);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(125, 27);
-            this.idLabel.TabIndex = 10;
             // 
             // PokemonTitle
             // 
@@ -162,12 +155,22 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.button2_Click);
             // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(375, 322);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(58, 20);
+            this.idLabel.TabIndex = 19;
+            this.idLabel.Text = "idLabel";
+            // 
             // OverviewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(975, 353);
+            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -176,7 +179,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PokemonDesc);
             this.Controls.Add(this.PokemonTitle);
-            this.Controls.Add(this.idLabel);
             this.Controls.Add(this.PokemonPicture);
             this.Controls.Add(this.customerDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -201,7 +203,6 @@
         #endregion
         private PictureBox PokemonPicture;
         private DataGridView customerDataGridView;
-        private TextBox idLabel;
         private TextBox PokemonTitle;
         private TextBox PokemonDesc;
         private PictureBox pictureBox1;
@@ -210,5 +211,6 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
+        private Label idLabel;
     }
 }

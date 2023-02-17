@@ -74,20 +74,21 @@
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(18, 71);
+            this.firstNameLabel.Location = new System.Drawing.Point(12, 75);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(80, 20);
             this.firstNameLabel.TabIndex = 1;
-            this.firstNameLabel.Text = "First name:";
+            this.firstNameLabel.Text = "PokeName";
+            this.firstNameLabel.Click += new System.EventHandler(this.firstNameLabel_Click);
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Location = new System.Drawing.Point(18, 119);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(82, 20);
+            this.lastNameLabel.Size = new System.Drawing.Size(35, 20);
             this.lastNameLabel.TabIndex = 1;
-            this.lastNameLabel.Text = "Last Name:";
+            this.lastNameLabel.Text = "Info";
             // 
             // addButton
             // 
